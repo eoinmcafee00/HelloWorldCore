@@ -27,7 +27,7 @@ steps:
       - ls -al /tmp
   - name: docker status
     commands:
-      - docker ps -a
+      - dockers ps -a
   - name: ping
     image: redis
     commands:
