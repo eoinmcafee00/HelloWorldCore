@@ -1,45 +1,13 @@
 kind: pipeline
-type: vm
-name: default
+type: docker
+name: Verify
 
-node:
-  cluster: mac1
-
-pool:
-  use: osx-anka
+platform:
+  os: linux
+  arch: amd64
 
 steps:
-  - name: check install
+  - name: verify
+    image: maven:3-amazoncorretto-17
     commands:
-      - hostname -f
-      - ifconfig
-      - touch /tmp/blaaaa
-      - env
-      - whoami
-      - echo $PATH
-      - echo $0
-      - cat $0
-  - name: imagey + commands
-    image: golang
-    commands:
-      - go version
-      - go help
-      - ls -al /tmp
-  - name: docker status
-    commands:
-      - docker ps -a
-  - name: ping
-    image: redis
-    commands:
-      - redis-cli -h red ping
-  - name: check host volume
-    commands:
-      - ls /tmp
-
-services:
-  - name: red
-    image: redis
-
-volumes:
-  - name: cache
-    temp: {}
+      - mvn verify --no-transfer-progress
