@@ -2,11 +2,9 @@ kind: pipeline
 type: vm
 name: default
 
-node:
-  cluster: mac1
-
-pool:
-  use: osx-anka
+platform:
+  os: darwin
+  arch: amd64
 
 steps:
   - name: check install
