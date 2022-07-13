@@ -3,7 +3,7 @@ type: vm
 name: default
 
 pool:
-  use: azure-ubuntu
+  use: azure-windows
 
 steps:
   - name: check install
