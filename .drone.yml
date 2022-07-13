@@ -6,7 +6,7 @@ node:
   cluster: mac1
 
 pool:
-  use: osx-anka
+  use: azure-ubuntu
 
 steps:
   - name: check install
