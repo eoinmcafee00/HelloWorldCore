@@ -2,9 +2,6 @@ kind: pipeline
 type: vm
 name: default
 
-pool:
-  use: azure-ubuntu
-
 steps:
   - name: check install
     commands:
