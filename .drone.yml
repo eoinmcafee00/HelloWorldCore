@@ -2,9 +2,8 @@ kind: pipeline
 type: vm
 name: default
 
-
 pool:
-  use: osx-anka
+  use: anka-build
 
 steps:
   - name: check install
