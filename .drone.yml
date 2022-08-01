@@ -8,7 +8,7 @@ pool:
 steps:
   - name: check install
     commands:
-      - sleep 2m
+      - sleep 100
       - hostname -f
       - ifconfig
       - touch /tmp/blaaaa
