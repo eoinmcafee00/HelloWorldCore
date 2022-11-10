@@ -8,6 +8,8 @@ pool:
 steps:
   - name: check xcode versions
     commands:
+      - echo $PATH
+      - pwd
       - xcodebuild -version
       - sudo xcode-select -switch /Application/Xcode-14.1.0.app
       - xcodebuild -version
