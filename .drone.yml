@@ -8,6 +8,7 @@ pool:
 steps:
   - name: check xcode versions
     commands:
+      - export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Develope
       - sudo xcode-select -switch /Applications/Xcode-14.1.0.app
       - xcodebuild -version
       - sudo xcode-select -switch /Applications/Xcode-14.1.0.app
