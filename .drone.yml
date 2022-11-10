@@ -9,7 +9,7 @@ steps:
   - name: check xcode versions
     commands:
       - echo $PATH
-      - sudo xcode-select --switch /Library/Developer/CommandLineTools
+      - sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
       - xcodebuild -version
       - sudo xcode-select -switch /Application/Xcode-14.1.0.app
       - xcodebuild -version
