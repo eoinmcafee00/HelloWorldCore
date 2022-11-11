@@ -9,7 +9,7 @@ steps:
   - name: check xcode versions
     commands:
       - echo '"export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer"' >> ~/.bashrc
-      - xcodebuild -runFirstLaunch 
+      - source ~/.bashrc
       - sudo xcode-select -switch /Applications/Xcode-14.1.0.app
       - xcodebuild -version
       - sudo xcode-select -switch /Applications/Xcode-14.1.0.app
