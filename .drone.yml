@@ -10,7 +10,7 @@ steps:
     commands:
       - sudo xcode-select -switch /Applications/Xcode_14.1.0.app
       - xcodebuild -version
-      - sudo xcode-select -switch /Applications/Xcode_14.1.0.app
+      - sudo xcode-select -switch /Applications/Xcode_14.0.1.app
       - xcodebuild -version
       - sudo xcode-select -switch /Applications/Xcode_13.4.0.app
       - xcodebuild -version
