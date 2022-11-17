@@ -3,7 +3,7 @@ type: vm
 name: default
 
 pool:
-  use: anka-build
+  use: anka-arm64
 
 steps:
   - name: check xcode versions
