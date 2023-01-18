@@ -17,4 +17,3 @@ steps:
       - sudo xcode-select -switch /Applications/Xcode_13.4.0.app
       - xcodebuild -version
       - xcrun swift -version
-      - sleep 500
