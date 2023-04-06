@@ -14,5 +14,5 @@ steps:
       aws_region: us-east-2
       aws_session_token:
         from_secret: aws_session_token
-      commands:
-        - echo "Creating S3 bucket"
+    commands:
+      - echo "Creating S3 bucket"
