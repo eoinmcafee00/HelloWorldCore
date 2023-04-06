@@ -15,4 +15,4 @@ steps:
       aws_session_token:
         from_secret: aws_session_token
     commands:
-      - echo "Creating S3 bucket"
+      - aws s3api create-bucket --bucket my-test-bucket-12345 --region us-east-2
