@@ -8,12 +8,12 @@ pool:
 steps:
   - name: check xcode versions
     commands:
-      - sudo xcode-select -switch /Applications/Xcode_14.3.0.app
+      - sudo xcode-select -switch /Applications/Xcode_14.3.app
       - xcodebuild -version
       - xcrun swift -version
-      - sudo xcode-select -switch /Applications/Xcode_14.2.0.app
+      - sudo xcode-select -switch /Applications/Xcode_14.2.app
       - xcodebuild -version
       - xcrun swift -version
-      - sudo xcode-select -switch /Applications/Xcode_14.1.0.app
+      - sudo xcode-select -switch /Applications/Xcode_14.1.app
       - xcodebuild -version
       - xcrun swift -version
