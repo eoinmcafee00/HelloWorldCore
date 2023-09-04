@@ -2,14 +2,14 @@ kind: pipeline
 name: default
 
 steps:
-  - name: ecr-login
-    image: plugins/ecr
+  - name: build-and-push
+    image: plugins/docker
     settings:
-      access_key:
-        from_secret: aws_access_key_id
-      secret_key:
-        from_secret: aws_secret_access_key
-      aws_session_token:
-        from_secret: aws_session_token
+      tags: latest
+      dockerfile: Dockerfile
+      username:
+        from_secret: docker_username  
+      password:
+        from_secret: docker_password  
       region: us-east-2
       repo: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
