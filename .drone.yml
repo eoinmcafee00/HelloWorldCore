@@ -1,47 +1,20 @@
----
 kind: pipeline
-name: pipeline-1
-
-platform:
-  os: linux
-  arch: amd64
+name: default
 
 steps:
-  - name: step-1
-    image: alpine
+  - name: build
+    image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
     commands:
-      - echo "Hello from pipeline-1"
+      - echo "Running inside the ECR image"
+      - ./your-build-script.sh
 
-trigger:
-  ref:
-    - refs/heads/main
-    - refs/tags/**
-    - refs/pull/**
+# Registry credentials
+image_pull_secrets:
+  - ecr_credentials
 
 ---
-kind: pipeline
-name: pipeline-2
-
-platform:
-  os: linux
-  arch: amd64
-
-steps:
-  - name: step-1
-    image: alpine
-    commands:
-      - echo "Hello from pipeline-2"
-
-trigger:
-  ref:
-    - refs/heads/main
-    - refs/tags/**
-    - refs/pull/**
-
-depends_on:
-  - pipeline-1
----
-kind: signature
-hmac: b0cc13e766e3618d7628a44eb6e6a9b70342b26fb595dac954691251801f9483
-
-...
+kind: secret
+name: ecr_credentials
+get:
+  path: ecr
+  name: credentials
