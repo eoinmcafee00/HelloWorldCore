@@ -6,6 +6,3 @@ steps:
     image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
     commands:
       - echo "Running commands inside the ECR image"
-
-image_pull_secrets:
-  - ecr_credentials
