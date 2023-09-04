@@ -2,14 +2,10 @@ kind: pipeline
 name: default
 
 steps:
-  - name: build-and-push
-    image: plugins/docker
-    settings:
-      tags: latest
-      dockerfile: Dockerfile
-      username:
-        from_secret: username  
-      password:
-        from_secret: password  
-      region: us-east-2
-      repo: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
+  - name: use-ecr-image
+    image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
+    commands:
+      - echo "Running commands inside the ECR image"
+
+image_pull_secrets:
+  - ecr_credentials
