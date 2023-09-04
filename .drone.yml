@@ -8,8 +8,8 @@ steps:
       tags: latest
       dockerfile: Dockerfile
       username:
-        from_secret: Username  
+        from_secret: username  
       password:
-        from_secret: Password  
+        from_secret: password  
       region: us-east-2
       repo: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
