@@ -2,19 +2,14 @@ kind: pipeline
 name: default
 
 steps:
-  - name: build
-    image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
-    commands:
-      - echo "Running inside the ECR image"
-      - ./your-build-script.sh
-
-# Registry credentials
-image_pull_secrets:
-  - ecr_credentials
-
----
-kind: secret
-name: ecr_credentials
-get:
-  path: ecr
-  name: credentials
+  - name: ecr-login
+    image: plugins/ecr
+    settings:
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      aws_session_token:
+        from_secret: aws_session_token
+      region: us-east-2
+      repo: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
