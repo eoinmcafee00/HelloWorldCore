@@ -8,6 +8,6 @@ platform:
 
 steps:
   - name: hello
-    image:  image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test:latest
+    image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test:latest
     commands:
     - echo hello there from ecr
