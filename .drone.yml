@@ -2,6 +2,10 @@ kind: pipeline
 name: default
 type: docker
 
+platform:
+  os: linux
+  arch: arm64
+
 steps:
   - name: use-ecr-image
     image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test
