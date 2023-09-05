@@ -7,7 +7,7 @@ platform:
   arch: arm64
 
 steps:
-  - name: use-ecr-image
-    image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test:latest
+  - name: hello
+    image: 392115778539.dkr.ecr.us-east-2.amazonaws.com/myalpine:latest
     commands:
-      - echo "Running commands inside the ECR image"
+    - echo hello there from ecr
