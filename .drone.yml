@@ -8,6 +8,6 @@ platform:
 
 steps:
   - name: use-ecr-image
-    image: eoin-test:latest
+    image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test:latest
     commands:
       - echo "Running commands inside the ECR image"
