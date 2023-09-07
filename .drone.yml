@@ -9,5 +9,6 @@ platform:
 steps:
   - name: hello
     image: 093396591680.dkr.ecr.us-east-2.amazonaws.com/eoin-test:latest
+    pull_policy: always
     commands:
     - echo hello there from ecr
