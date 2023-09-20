@@ -8,10 +8,8 @@ steps:
     pull: never
     settings:
       tag: latest
-      repo: eoin-test
+      repo: ci-play/eoin-test/test
       registry_type: GAR
       location: us
-      project_id: ci-play
-      image_name: test
       json_key:
         from_secret: gcr_json_key
