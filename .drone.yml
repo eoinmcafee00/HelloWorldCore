@@ -8,6 +8,6 @@ steps:
     pull: never
     settings:
       tag: latest
-      repo: test
+      repo: test/ml-service
       json_key:
         from_secret: gcr_json_key
