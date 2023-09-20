@@ -10,7 +10,7 @@ steps:
       tag: latest
       repo: eoin-test
       registry_type: GAR
-      gar_location: us
+      location: us
       project_id: ci-play
       json_key:
         from_secret: gcr_json_key
