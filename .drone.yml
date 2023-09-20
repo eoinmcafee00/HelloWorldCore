@@ -8,6 +8,6 @@ steps:
     pull: never
     settings:
       tag: latest
-      repo: us.gcr.io/ci-play/test/ml-service
+      repo: ci-play/test/ml-service
       json_key:
         from_secret: gcr_json_key
