@@ -11,5 +11,5 @@ steps:
       repo: ci-play/eoin-test/test
       registry_type: GAR
       location: us
-      json_key:
-        from_secret: gcr_json_key
+      oidc_token:
+        from_secret: token
