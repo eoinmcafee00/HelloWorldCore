@@ -9,8 +9,7 @@ steps:
     settings:
       tag: latest
       repo: ci-play/eoin-test/test
-      registry_type: GAR
+      registry_type: GCR
       location: us
-      debug: "true"
       oidc_token:
         from_secret: token
