@@ -10,6 +10,6 @@ steps:
       tag: latest
       repo: ci-play/eoin-test/test
       registry_type: GAR
-      location: us
+      location: europe
       oidc_token:
         from_secret: token
