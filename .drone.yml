@@ -14,4 +14,4 @@ steps:
       oidc_token:
         from_secret: token
     commands:
-      - cat ~/.docker/config.json
+      - sleep 1000
