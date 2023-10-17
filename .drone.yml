@@ -13,3 +13,5 @@ steps:
       location: europe
       oidc_token:
         from_secret: token
+    commands:
+      cat ~/.docker/config.json
