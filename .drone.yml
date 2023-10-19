@@ -11,10 +11,8 @@ steps:
       repo: ci-play/eoin-test/test
       registry_type: GAR
       location: europe
-      project_number: 763860969292
-      pool_id: drone
-      provider_id: oidc
-      service_account_email: harness-ci-automation@ci-play.iam.gserviceaccount.com
-      oidc_token_id:
-        from_secret: token
+      username:
+        from_secret: username
+      password:
+        from_secret: password
 
