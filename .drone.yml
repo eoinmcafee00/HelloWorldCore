@@ -4,12 +4,11 @@ type: docker
 
 steps:
   - name: push-to-gar
-    image: plugins/gcr
+    image: plugins/gar
     pull: never
     settings:
       tag: latest
       repo: ci-play/eoin-test/test
-      registry_type: GAR
       location: europe
       project_number: 763860969292
       pool_id: drone
