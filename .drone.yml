@@ -4,7 +4,7 @@ type: docker
 
 steps:
   - name: push-to-gar
-    image: plugins/gar
+    image: plugins/gcr
     pull: never
     settings:
       tag: latest
