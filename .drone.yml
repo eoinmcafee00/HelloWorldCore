@@ -1,19 +1,19 @@
 kind: pipeline
 name: default
-type: docker
+type: vm
+
 
 steps:
   - name: push-to-gar
-    image: plugins/gar
-    pull: never
+    image: eoinmcafee/kaniko-gar
+    pull: always
     settings:
       tag: latest
       repo: ci-play/eoin-test/test
       location: europe
       project_number: 763860969292
       pool_id: drone
-      provider_id: oidc
+      provider_id: local
       service_account_email: harness-ci-automation@ci-play.iam.gserviceaccount.com
       oidc_token_id:
         from_secret: token
-
