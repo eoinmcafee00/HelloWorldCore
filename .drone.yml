@@ -2,6 +2,12 @@ kind: pipeline
 name: default
 type: vm
 
+pool:
+  use: ubuntu
+
+platform:
+  os: linux
+  arch: amd64
 
 steps:
   - name: push-to-gar
